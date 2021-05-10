@@ -1,2 +1,2 @@
 # css-norm
-Up to date css normalizer
+Up to date CSS-normalisation
