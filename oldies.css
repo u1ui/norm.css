@@ -1,0 +1,60 @@
+hr {
+    box-sizing: content-box; /* firefox 57- https://bugzilla.mozilla.org/show_bug.cgi?id=1377188 */
+    height: 0; /* fixed */
+    overflow: visible; /* ie edge 18- */
+}
+pre, code, kbd, samp {
+    font-family: monospace, monospace; /* Consolas on windows? Correct the inheritance and scaling of font size in all browsers. */
+    font-size: 1em; /* Correct the odd `em` font sizing in all browsers. */
+}
+table {
+    text-indent: 0; /* Remove text indentation from table contents in Chrome and Safari. */
+}
+select, button {
+    text-transform: none; /* Remove the inheritance of text transform in Firefox. */
+}
+progress {
+    vertical-align: baseline; /* needed? (firefox, chrome, safari: vertical-align: -0.2em) */
+}
+audio:not([controls]) { /* "Add the correct display in iOS 4-7". do we need it? display is inline but its still hidden!? */
+    display: none;
+    height: 0;
+}
+ol ol, ol ul, ul ol, ul ul {
+  margin: 0;  /* ie edge18- */
+}
+main {
+    display: block; /* ie */
+}
+a {
+    background-color: transparent; /* ie 10 */
+}
+svg:not(:root) {
+    overflow: hidden; /* ie */
+}
+button {
+    overflow: visible; /* ie */
+    text-transform: none; /* edge 18- ff? ie */
+}
+input {
+    overflow: visible; /* edge18- ie */
+}
+legend {
+    box-sizing: border-box; /* ie edge18- */
+    color: inherit; /* ie */
+    display: table; /* ie edge18- */
+    max-width: 100%; /* ie edge18- */
+    white-space: normal; /* ie edge18- */
+}
+progress {
+    display: inline-block; /* ie edge18- */
+}
+textarea {
+    overflow: auto; /* ie */
+}
+details {
+    display: block; /* ie edge18- */
+}
+template {
+    display: none; /* ie */
+}

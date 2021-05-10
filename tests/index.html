@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Level.css TEST</title>
+
+  <script src="./test.js" type=module></script>
+
+  <link rel="stylesheet" href="../oldies.css">
+  <link rel="stylesheet" href="../norm.css">
+  <link rel="stylesheet" href="../experiments.css">
+
+  <style>
+    body {
+      display: grid;
+      gap:1rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    body > * {
+      background:#eee;
+      min-height:300px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+<section>
+  <b>line-height should be 1.15</b>
+  <table>
+    <tr>
+      <td>font-size:
+      <td id=fontSizeOut>
+    <tr>
+      <td>line-height:
+      <td id=lineHeightOut>
+    <tr>
+      <td>line-height unitless:
+      <td id=lineHeightOutRelative style=font-weight:900>
+  </table>
+  <div id=lineHeightTest style="box-shadow:0 0 4px">
+    Testing this<br>
+    5 Lines<br>
+    height:<br>
+    Expected: <b id=lineHeightExpected>x</b><br>
+    Result: <b id=lineHeightResult>x</b>
+  </div>
+  <script>
+    setInterval(function(){
+      var style = getComputedStyle(document.documentElement);
+      var fontSize   = style.fontSize.replace('px','');
+      var lineHeight = style.lineHeight.replace('px','');
+      fontSizeOut.innerHTML = fontSize;
+      lineHeightOut.innerHTML = lineHeight;
+      lineHeightOutRelative.innerHTML = parseFloat(lineHeight) / parseFloat(fontSize);
+
+      var testHeight = lineHeightTest.offsetHeight;
+      var expected = 5 * 1.15 * parseFloat(fontSize);
+      lineHeightExpected.innerHTML = '(5*1.15*'+parseFloat(fontSize)+ ') = '+expected;
+      lineHeightResult.innerHTML   =  testHeight + 'px';
+    },100)
+  </script>
+</section>
+
+
+
+<div>
+  <b>h1</b>
+  <br>
+  H1 in a section should have same font-size and same margins
+  <div style="display:flex; gap:20px">
+    <div>
+      <h1>H1 in div</h1>
+      more content
+    </div>
+    <section>
+      <h1>H1 in section</h1>
+      more content
+    </section>
+  </div>
+</div>
+
+<section>
+  <b>Nested dl, ol, ul</b>
+  <div id=listTests style="height:500px">
+    <dl>
+      <dt>
+        dl dl:
+        <dl>
+          <dt>dl > dt > dl > dt</dt>
+          <dd>dl > dt > dl > dd</dd>
+        </ol>
+      </dt>
+      <dd>dl > dd</dd>
+      <dt>
+        dl ol:
+        <ol>
+          <li>dl > dt > ol > li</li>
+        </ol>
+      </dt>
+      <dd>dl > dd</dd>
+      <dt>
+        dl ul:
+        <ul>
+          <li>dl > dt > ul > li</li>
+        </ul>
+      </dt>
+      <dd>dl > dd</dd>
+    </dl>
+    <ol>
+      <li>
+        ol dl:
+        <dl>
+          <dt> ol > li > dl > dt </dt>
+          <dd> ol > li > dl > dd </dd>
+        </dl>
+      </li>
+    </ol>
+    <ul>
+      <li>
+        ul dl:
+        <dl>
+          <dt> ul > li > dl > dt </dt>
+          <dd> ul > li > dl > dd </dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+  <style>
+    #listTests * {
+      line-height:1.15;
+      outline:1px solid red;
+    }
+    #listTests dl dl,
+    #listTests dl ol,
+    #listTests dl ul,
+    #listTests ol dl,
+    #listTests ul dl {
+      outline-color:green;
+      z-index:1;
+      position:relative;
+    }
+  </style>
+
+</section>
+
+<section>
+  <b>hr</b>
+  <br>
+  border-color sould be blue<br>
+  height should be 0 (red background-color not visible)<br>
+  should overflow wrapper element (content-box, width:100%)
+  <div id=hr-wrapper>
+    <hr id=hr>
+  </div>
+  <style style="display:block; white-space:pre">
+    #hr-wrapper {
+      color:blue;
+      width:60%;
+      box-shadow:0 0 5px green;
+    }
+    #hr {
+      background-color:red;
+      border:10px solid;
+      margin:0;
+      width:100%;
+    }
+  </style>
+</section>
+
+<section>
+  <b>abbr[title]</b>
+  <br>
+  <abbr title="Cascading Style Sheets">I should have dotted underline</abbr>
+  <br>
+  <abbr>I not</abbr>
+</section>
+
+<section style="line-height:1.3">
+  <b>b, string</b>
+  <br>
+  font-weight:100:
+  <div id=b-wrapper>
+    <div style="font-weight:100">
+      <span>span</span> <br>
+      <b>this is a b</b>, <strong>strong</strong>
+    </div>
+    font-weight:400:
+    <div style="font-weight:400">
+      <span>span</span> <br>
+      <b>this is a b</b>, <strong>strong</strong>
+    </div>
+    font-weight:500:
+    <div style="font-weight:500">
+      <span>span</span> <br>
+      <b>this is a b</b>, <strong>strong</strong>
+    </div>
+    font-weight:600:
+    <div style="font-weight:600">
+      <span>span</span> <br>
+      <b>this is a b</b>, <strong>strong</strong>
+    </div>
+  </div>
+  <style>
+    #b-wrapper {
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue";
+    }
+    #b-wrapper > div {
+      font-size:27px;
+      box-shadow: 0 0 5px;;
+    }
+  </style>
+</section>
+
+<section style="line-height:1.3; font-size:30px">
+  <b>pre, code, kbd, samp</b>
+  <pre>pre
+12345</pre>
+  <code>code</code> <span style="font-family: monospace;">span mono</span>  <span>span</span><br>
+  <kbd>kbd</kbd> <span style="font-family: monospace;">span mono</span>  <span>span</span><br>
+  <samp>samp</samp> <span style="font-family: monospace;">span mono</span>  <span>span</span><br>
+</section>
+
+<section style="line-height:1.3; font-size:30px">
+  <b>small</b><br>
+  has font-size 80%<br>
+  <span style="font-size:80%">span 80%</span> | <small>small 80%?</small>
+</section>
+
+<section>
+  <b>audio</b>
+  width controls-attribute
+  <br>
+  <audio controls></audio>
+  <br>
+  widhtout
+  <audio></audio>
+</section>
+
+<section>
+  <b>table</b>
+  <br>
+  border-color should be currentColor not grey.
+  <div id=table-wrapper>
+    <table id=table>
+      <tr>
+        <td>Table Cell<br>Table Cell line 2
+    </table>
+  </div>
+  <style>
+    #table-wrapper {
+      font-size:30px;
+      border-color:green;
+    }
+    #table {
+      border-width:10px;
+      border-style:solid;
+    }
+  </style>
+</section>
+
+<section>
+  <b>button, input, select: margin:0</b>
+  <br>
+  <button>Button</button><input><select><option></select><br>
+  <button>Button</button><input><select><option></select><br>
+  <hr>
+  <b>button, select text-transform not inherited</b>
+  <br>
+  <div style=text-transform:uppercase>
+    UpperCase<br>
+    <button>Button</button><input value=input><select><option>select</select>
+  </div>
+
+  <hr>
+  <b>input size-attr</b>
+  <br>
+  <table>
+    <tr>
+      <td>size=1
+      <td><input size="1">
+    <tr>
+      <td>size=4
+      <td><input size="4">
+    <tr>
+      <td>size=20
+      <td><input size="20">
+    <tr>
+      <td>no size
+      <td><input>
+
+  </table>
+
+</section>
+
+
+<section>
+  TODO:
+  /**
+  * Correct the inability to style buttons in iOS and Safari.
+  */
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+</section>
+
+<section>
+  <b>progress element should be vertical-align baseline</b>
+  <br>
+  <div style="line-height:2em; outline:1px solid green">
+    Synergistically network sticky potentialities and installed base systems.<br>
+    Synergistically network.
+    <progress id="file" max="100" value="70">70%</progress>
+  </div>
+</section>
+
+<section style="line-height:1.5">
+  <b>textarea margin:0</b>
+  <br>
+  <div style="border:1px solid">
+    <textarea></textarea>g
+  </div>
+  <div style="border:1px solid">
+    <textarea style="margin:0">referenz</textarea>g
+  </div>
+</section>
+
+<section>
+  <b>type=search</b>
+  <input type=search>
+  /**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+</section>
+
+<section>
+  <b></b>
+
+  /**
+  * Correct the cursor style of increment and decrement buttons in Safari.
+  */
+
+ ::-webkit-inner-spin-button,
+ ::-webkit-outer-spin-button {
+   height: auto;
+ }
+</section>
+
+<section>
+  <b>placeholder</b>
+  <br>
+  not a fixed color, instead opacity. color inherits
+  <input placeholder=placeholder-text style="background-color:rgb(117, 117, 117); color:#fff">
+</section>
+
+<section>
+  /**
+  * Remove the inner padding in Chrome and Safari on macOS.
+  */
+ ::-webkit-search-decoration {
+   -webkit-appearance: none;
+ }
+</section>
+
+<section>
+  <b>file button</b>
+  <input type=file>
+  /**
+  * 1. Correct the inability to style upload buttons in iOS and Safari.
+  * 2. Change font properties to `inherit` in Safari.
+  */
+ ::-webkit-file-upload-button {
+   -webkit-appearance: button; /* 1 */
+   font: inherit; /* 2 */
+ }
+</section>
+
+<section style="line-height:1.2">
+  <b>button inner outline (firefox)</b>
+  <div id=buttonOutlinesTest style="font-size:30px">
+    <button>focus on me</button>
+  </div>
+  <style>
+  #buttonOutlinesTest button {
+    font-size:30px;
+    padding:10px;
+  }
+  </style>
+</section>
+
+<section>
+  /**
+  * Restore the focus outline styles unset by the previous rule in Firefox.
+  */
+
+ :-moz-focusring {
+   outline: 1px dotted ButtonText;
+ }
+</section>
+
+<section>
+  <b>:invalid</b>
+  <br>
+  should not have invalid style by default<br>
+  type something and blur
+  <input required pattern=x value=y id=invalidTest>
+  <script>
+    invalidTest.value = 'u';
+  </script>
+</section>
+
+<section>
+  <div style="position:relative">
+    <button onclick="this.nextElementSibling.toggleAttribute('open')">toggle dialog</button>
+    <dialog id="favDialog" open>
+      <form method="dialog">
+        <p>
+          <label>Favorite animal:
+            <select>
+              <option></option>
+              <option>Brine shrimp</option>
+              <option>Red panda</option>
+              <option>Spider monkey</option>
+            </select>
+          </label>
+        </p>
+        <menu>
+          <button value="cancel">Cancel</button>
+          <button id="confirmBtn" value="default">Confirm</button>
+          <button type=button onclick="this.closest('dialog').append('test '.repeat(10000))">Add lot of contents</button>
+        </menu>
+      </form>
+    </dialog>
+    Some Text. Phosfluorescently evolve cross-media models with progressive markets. Dynamically scale frictionless innovation rather than cross-unit interfaces. Intrinsicly aggregate backward-compatible models and strategic quality vectors. Objectively e-enable resource sucking value vis-a-vis go forward leadership. Quickly integrate fully tested channels rather than enabled catalysts for change. Phosfluorescently seize cross-platform benefits with.
+  </div>
+</section>
+
+
+<section>
+
+  <details id=summaryTest>
+    <summary>No list-style-type</summary>
+    <p>More info about the details.</p>
+  </details>
+
+  <details id=summaryTest>
+    <summary style="list-style-type:circle">list-style-type:circle</summary>
+    <p>More info about the details.</p>
+  </details>
+
+  <details id=summaryTest>
+    <summary style="list-style-type:armenian">list-style-type:armenian</summary>
+    <p>More info about the details.</p>
+  </details>
+
+</section>

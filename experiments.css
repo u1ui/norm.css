@@ -1,0 +1,25 @@
+/* performance? */
+xx_svg:not(:root) /*, xinput, textarea, select, symbol, image, marker, pattern, foreignObject */ {
+    overflow:clip; /* ~8% faster? is it worth it? */
+}
+
+abbr[title] {
+    text-decoration-thickness: .13em; /* ok? */
+}
+
+pre, code, kbd, samp {
+    /*
+    chrome uses "Consolas"
+    "Courier New" is available everywhere? https://www.granneman.com/webdev/coding/css/fonts-and-formatting/web-browser-font-defaults
+    Can not reproduce need of bug fix "monospace, monospace"
+    */
+    font-family: "Courier New", monospace;
+    xfont-size: 1em; /* Correct the odd `em` font sizing in all browsers. */
+}
+input:not([type=radio], [type=checkbox]) {
+    xborder-radius:0; /* chrome adds a border-radius, but if reseted, input styles are resetted to old school inputs */
+    xborder:1px solid #000;
+    /* if attr supported something like this *
+    width: calc(attr(size, 20) * .6em + 1em);
+    /**/
+}
