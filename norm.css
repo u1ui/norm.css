@@ -54,13 +54,6 @@ button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button; /* Correct the inability to style upload buttons in iOS and Safari. */
   font: inherit; /* Change font properties to `inherit` in Safari. */
 }
-::-moz-focus-inner { /* Remove the inner border and padding of focus outlines in Firefox. */
-  border-style: none;
-  padding: 0;
-}
-:where(:-moz-focusring) { /* Restore the focus outline styles unset by the previous rule in Firefox. */
-  outline: 1px dotted ButtonText;
-}
 :where(:-moz-ui-invalid) { /* Remove the additional :invalid styles in Firefox. */
   box-shadow: none;
 }
