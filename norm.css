@@ -10,7 +10,7 @@ h1 {
   font-size: 2em; /* Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
   margin: 0.67em 0;
 }
-:where(dl :is(dl, ol, ul), :is(ol, ul) dl) {
+:where(dl, ol, ul) :where(dl, ol, ul) {
   margin: 0; /* Remove the margin on nested lists in Chrome and Safari. */
 }
 :where(hr) {
