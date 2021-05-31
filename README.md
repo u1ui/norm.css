@@ -34,3 +34,11 @@ https://github.com/krishdevdb/reseter.css/blob/master/css/reseter.css
 https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css
 
 https://github.com/h5bp/main.css/blob/main/src/_base.css (more optionated)
+
+## user-agent stylesheets
+
+chrome: https://chromium.googlesource.com/chromium/blink/+/refs/heads/main/Source/core/css/html.css
+
+webkit: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
+
+firefox: https://searchfox.org/mozilla-central/source/layout/style/res/html.css
