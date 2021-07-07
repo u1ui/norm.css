@@ -81,11 +81,12 @@ function resetInputs(){
     })
 }
 resetInputs();
-testTools.addEventListener('input', function(e){
-    let el = e.target;
-    console.log(el)
-    document.documentElement.style.setProperty('--'+el.name, el.value + el.getAttribute('unit') )
-})
+testTools.addEventListener('input', ({target})=>{
+    console.log(target)
+    document.documentElement.style.setProperty('--'+target.name, target.value + target.getAttribute('unit') );
+});
+
+
 testTools.contentEditable = false;
 
 document.querySelectorAll('link[rel=stylesheet]').forEach(link=>{
