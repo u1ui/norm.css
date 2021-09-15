@@ -28,6 +28,7 @@ h1 {
 }
 :where(table) {
   border-color: currentColor; /* Correct table border color in Chrome and Safari. */
+  /* text-indent: 0; will enable it if someone has a need for it */
 }
 textarea, /* textarea: Firefox and Safari. */
 button, input, select /* Safari. */ {
