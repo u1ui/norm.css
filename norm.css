@@ -46,7 +46,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 ::placeholder { /* Correct the text style of placeholders in Chrome and Safari. */
   color: inherit;
-  opacity: 0.54;
+  opacity: .54;
 }
 ::-webkit-search-decoration {
   -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS. */
