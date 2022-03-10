@@ -60,7 +60,11 @@ button, [type="button"], [type="reset"], [type="submit"] {
 :where(:-moz-ui-invalid) { /* Remove the additional :invalid styles in Firefox. */
   box-shadow: none;
 }
-dialog { /* Add the correct styles in Safari 14 */
+summary { /* Add the correct display in safari 14 */
+  display: list-item;
+}
+/* Add the correct styles in Safari 14, needed? If we use a dialog, we use the polyfill anyway
+dialog {
   background-color: white;
   border: solid;
   color: black;
@@ -78,6 +82,4 @@ dialog { /* Add the correct styles in Safari 14 */
 dialog:not([open]) {
   display: none;
 }
-summary { /* Add the correct display in safari 14 */
-  display: list-item;
-}
+*/
