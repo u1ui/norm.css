@@ -15,7 +15,7 @@ Up to date CSS normalisation to fix browser bugs and promote spec compatibility.
 - uses :where() only for normalization in browsers that do support it.
 - There is a beta.css for styles not yet definite
 
-## Demo
+# Demo
 https://raw.githack.com/u1ui/norm.css/main/tests/index.html  
 
 # Resources
@@ -36,7 +36,7 @@ https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css
 
 https://github.com/h5bp/main.css/blob/main/src/_base.css (more optionated)
 
-## user-agent stylesheets
+## User-agent stylesheets
 
 chrome: https://chromium.googlesource.com/chromium/blink/+/refs/heads/main/Source/core/css/html.css
 
