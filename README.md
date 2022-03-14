@@ -1,5 +1,5 @@
 # norm.css
-Up to date CSS-normalisation
+Up to date CSS normalisation to fix browser bugs and promote spec compatibility.
 
 # Ussage
 
@@ -10,8 +10,7 @@ Up to date CSS-normalisation
 # Description
 
 - lightweight
-- Optional styles are **not** included as they can break existing designs.  
-See https://github.com/u1ui/base.css for more optional enhancements.
+- ***No*** opinionated styles. (use https://github.com/u1ui/base.css for it).
 - IE11 not supported
 - uses :where() only for normalization in browsers that do support it.
 - There is a beta.css for styles not yet definite
