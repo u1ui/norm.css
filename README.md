@@ -1,13 +1,13 @@
 # norm.css
 Up to date CSS-normalisation
 
-# Ussage
+## Ussage
 
 ```html
 <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/norm.css/norm.min.css">
 ```
 
-# Description
+## Description
 
 - lightweight
 - Optional styles are **not** included as they can break existing designs.  
@@ -19,7 +19,7 @@ See https://github.com/u1ui/base.css for more optional enhancements.
 ## Demo
 https://raw.githack.com/u1ui/norm.css/main/tests/index.html  
 
-# Resources
+## Resources
 
 https://github.com/csstools/normalize.css/blob/master/evergreen.css
 
@@ -37,7 +37,7 @@ https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css
 
 https://github.com/h5bp/main.css/blob/main/src/_base.css (more optionated)
 
-## user-agent stylesheets
+### User-agent stylesheets
 
 chrome: https://chromium.googlesource.com/chromium/blink/+/refs/heads/main/Source/core/css/html.css
 
