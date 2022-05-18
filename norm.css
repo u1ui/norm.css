@@ -69,10 +69,8 @@ summary { /* Add the correct display in safari 14 */
   cursor: default;
 }
 [inert], [inert] * {
-  user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Add the correct styles in Safari 14, needed? If we use a dialog, we use the polyfill anyway
