@@ -1,6 +1,10 @@
 # norm.css
 normalization for crossbrowser compatibility
 
+## Demos
+
+[test.html](https://raw.githack.com/u1ui/norm.css/main/tests/test.html)  
+
 ## Description
 
 - lightweight
@@ -8,10 +12,6 @@ normalization for crossbrowser compatibility
 - IE11 not supported
 - uses :where() only for normalization in browsers that do support it.
 - There is a beta.css for styles not yet definite
-
-## Demo
-
-https://raw.githack.com/u1ui/norm.css/main/tests/test.html  
 
 ## Resources
 
