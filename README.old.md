@@ -1,5 +1,11 @@
-# norm.css
-normalization for crossbrowser compatibility
+# 🆗 norm.css
+Up to date CSS normalisation to fix browser bugs and promote spec compatibility.
+
+## Ussage
+
+```html
+<link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/norm.css/norm.min.css">
+```
 
 ## Description
 
@@ -10,7 +16,6 @@ normalization for crossbrowser compatibility
 - There is a beta.css for styles not yet definite
 
 ## Demo
-
 https://raw.githack.com/u1ui/norm.css/main/tests/test.html  
 
 ## Resources
@@ -31,6 +36,7 @@ https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css
 
 https://github.com/h5bp/main.css/blob/main/src/_base.css (more optionated)
 
+
 ## User-agent stylesheets
 
 Chrome: https://chromium.googlesource.com/chromium/blink/+/refs/heads/main/Source/core/css/html.css
@@ -39,8 +45,4 @@ Webkit: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
 
 Firefox: https://searchfox.org/mozilla-central/source/layout/style/res/html.css
 
-## About
-
-- MIT License, Copyright (c) 2022 <u1> (like all repositories in this organization) <br>
-- Suggestions, ideas, finding bugs and making pull requests make us very happy. ♥
 
