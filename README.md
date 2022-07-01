@@ -3,7 +3,7 @@ normalization for crossbrowser compatibility
 
 ## Demos
 
-[test.html](https://raw.githack.com/u1ui/norm.css/main/tests/test.html)  
+[test.html](http://gcdn.li/u1ui/norm.css@main/tests/test.html)  
 
 ## Description
 
