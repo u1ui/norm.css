@@ -1,5 +1,5 @@
 # norm.css
-normalization for crossbrowser compatibility
+🆗 normalization for crossbrowser compatibility
 
 ## Demos
 
