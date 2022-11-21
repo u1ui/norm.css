@@ -1,10 +1,11 @@
 html {
-	/* Correct the line height in firefox.
+	/* Correct line height.
 	Chrome seams to round computed line-height:
 	16px (font-size) * 1.15 (line-height) = 18.4px (line-height);
 	But chrome uses 18px
+	So use a number that gives full pixels. (1.124 or 1.1875)
 	*/
-	line-height: 1.15;
+	line-height: 1.1875;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
