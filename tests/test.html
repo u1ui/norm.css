@@ -30,7 +30,7 @@
 
 
 <section>
-  <b>line-height should be 1.15</b>
+  <b>line-height should be 1.1875</b>
   <table>
     <tr>
       <td>font-size:
@@ -59,8 +59,8 @@
       lineHeightOutRelative.innerHTML = parseFloat(lineHeight) / parseFloat(fontSize);
 
       var testHeight = lineHeightTest.offsetHeight;
-      var expected = 5 * 1.15 * parseFloat(fontSize);
-      lineHeightExpected.innerHTML = '(5*1.15*'+parseFloat(fontSize)+ ') = '+expected;
+      var expected = 5 * 1.1875 * parseFloat(fontSize);
+      lineHeightExpected.innerHTML = '(5*1.1875*'+parseFloat(fontSize)+ ') = '+expected;
       lineHeightResult.innerHTML   =  testHeight + 'px';
     },100)
   </script>
@@ -232,16 +232,6 @@
 </section>
 
 <section>
-  <b>audio</b>
-  width controls-attribute
-  <br>
-  <audio controls></audio>
-  <br>
-  widhtout
-  <audio></audio>
-</section>
-
-<section>
   <b>table</b>
   <br>
   border-color should be currentColor not grey.
@@ -299,7 +289,6 @@
 
 
 <section>
-  TODO:
   /**
   * Correct the inability to style buttons in iOS and Safari.
   */
@@ -310,6 +299,7 @@
   [type="submit"] {
     -webkit-appearance: button;
   }
+  <button>test</button>
 </section>
 
 <section>
@@ -342,27 +332,27 @@
 <section>
   <b>type=search</b>
   <input type=search>
-  /**
-  * 1. Correct the odd appearance in Chrome and Safari.
-  * 2. Correct the outline style in Safari.
-  */
+  <input value="normal textfield as reference">
+  <pre>
+  Correct the odd appearance in Chrome and Safari.
   [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield;
   }
+  Remove the inner padding in Chrome and Safari on macOS.
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  </pre>
 </section>
 
 <section>
-  <b></b>
-
-  /**
-  * Correct the cursor style of increment and decrement buttons in Safari.
-  */
-
- ::-webkit-inner-spin-button,
- ::-webkit-outer-spin-button {
-   height: auto;
- }
+  <pre>
+  Correct the cursor style of increment and decrement buttons in Safari.
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+    height: auto;
+  }
+ <input type="number" step="1" value="1">
 </section>
 
 <section>
@@ -370,15 +360,6 @@
   <br>
   not a fixed color, instead opacity. color inherits
   <input placeholder=placeholder-text style="background-color:rgb(117, 117, 117); color:#fff">
-</section>
-
-<section>
-  /**
-  * Remove the inner padding in Chrome and Safari on macOS.
-  */
- ::-webkit-search-decoration {
-   -webkit-appearance: none;
- }
 </section>
 
 <section>
