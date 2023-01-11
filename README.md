@@ -8,10 +8,10 @@
 ## Description
 
 - lightweight
+- up to date
 - ***No*** opinionated styles. (use https://github.com/u1ui/base.css for it).
-- IE11 not supported
-- uses :where() only for normalization in browsers that do support it.
-- There is a beta.css for styles not yet definite
+- uses :where() only for normalizations in browsers that do support it.
+
 
 ## Resources
 
@@ -29,7 +29,9 @@ https://github.com/krishdevdb/reseter.css/blob/master/css/reseter.css
 
 https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css
 
-https://github.com/h5bp/main.css/blob/main/src/_base.css (more optionated)
+https://github.com/petertjmills/tailwind-preflight/blob/master/src/preflight.css (plus optionated)
+
+https://github.com/h5bp/main.css/blob/main/src/_base.css (plus optionated)
 
 ## User-agent stylesheets
 
@@ -43,4 +45,3 @@ Firefox: https://searchfox.org/mozilla-central/source/layout/style/res/html.css
 
 - MIT License, Copyright (c) 2022 <u1> (like all repositories in this organization) <br>
 - Suggestions, ideas, finding bugs and making pull requests make us very happy. ♥
-
