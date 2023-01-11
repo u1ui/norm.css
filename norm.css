@@ -37,6 +37,9 @@ textarea, /* textarea: Firefox and Safari. */
 button, input, select /* Safari. */ {
 	margin: 0;
 }
+:where(textarea) { /* behave like in firefox */
+	baseline-source: first; /* available in chrome 111, safari no */
+}
 button, [type="button"], [type="reset"], [type="submit"] {
 	-webkit-appearance: button; /* Correct the inability to style buttons in iOS and Safari. */
 }
