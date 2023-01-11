@@ -3,9 +3,6 @@ svg:not(:root), input, textarea, select, symbol, image, marker, pattern, foreign
     overflow:clip;
 }
 */
-abbr[title] {
-    text-decoration-thickness: .13em; /* ok? */
-}
 /*
 chrome uses "Consolas"
 "Courier New" is available everywhere? https://www.granneman.com/webdev/coding/css/fonts-and-formatting/web-browser-font-defaults

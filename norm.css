@@ -1,10 +1,7 @@
 html {
-	/* Correct line height.
-	Chrome seams to round computed line-height:
+	/* Chrome rounds computed line-height:
 	16px (font-size) * 1.15 (line-height) = 18.4px (line-height);
-	But chrome uses 18px
-	So use a number that gives full pixels. (1.124 or 1.1875)
-	*/
+	But chrome uses 18px. So use a number that gives full pixels. (1.124 or 1.1875) */
 	line-height: 1.1875;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
@@ -20,8 +17,9 @@ h1 {
 	color: inherit; /* Correct the inheritance of border color in Firefox. */
 }
 :where(abbr[title]) {
-	text-decoration: underline;
-	text-decoration: underline dotted; /* Add the correct text decoration in Safari. */
+	-webkit-text-decoration: underline dotted; /* safari (does not support unprefixed shorthand) */
+    text-decoration-thickness: .08em; /* safari, chrome to match firefox */
+	text-underline-offset: 0.1em; /* safari, chrome to match firefox */
 }
 :where(b, strong) {
 	font-weight: bolder; /* Add the correct font weight in Chrome and Safari. */
@@ -45,17 +43,19 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 [type="search"] {
 	-webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari. */
-	outline-offset: -2px; /* Correct the outline style in Safari. */
-}
-::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
-	height: auto; /* Correct the cursor style of increment and decrement buttons in Safari. */
-}
-::placeholder { /* Correct the text style of placeholders in Chrome and Safari. */
-	color: inherit;
-	opacity: .54;
+	/* outline-offset: -2px; /* Correct the outline style in Safari. Get worse in chrome... */
 }
 ::-webkit-search-decoration {
 	-webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS. */
+}
+/* i can not reproduce
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+	height: auto; /* Correct the cursor style of increment and decrement buttons in Safari * /
+}
+*/
+::placeholder { /* Correct the text style of placeholders in Chrome and Safari. */
+	color: inherit;
+	opacity: .54;
 }
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; /* Correct the inability to style upload buttons in iOS and Safari. */
@@ -68,7 +68,7 @@ summary { /* Add the correct display in safari 14 */
 	display: list-item;
 }
 
-[inert] {
+[inert] { /* chrome < 102 safari < 15.5 firefox < x */
 	pointer-events: none;
 	cursor: default;
 }
@@ -77,24 +77,3 @@ summary { /* Add the correct display in safari 14 */
 	-webkit-user-select: none;
 	user-select: none;
 }
-
-/* Add the correct styles in Safari 14, needed? If we use a dialog, we use the polyfill anyway
-dialog {
-	background-color: white;
-	border: solid;
-	color: black;
-	display: block;
-	height: -webkit-fit-content;
-	height: fit-content;
-	left: 0;
-	margin: auto;
-	padding: 1em;
-	position: absolute;
-	right: 0;
-	width: -webkit-fit-content;
-	width: fit-content;
-}
-dialog:not([open]) {
-	display: none;
-}
-*/
