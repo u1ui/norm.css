@@ -12,7 +12,6 @@
 - ***No*** opinionated styles. (use https://github.com/u1ui/base.css for it).
 - uses :where() only for normalizations in browsers that do support it.
 
-
 ## Resources
 
 https://github.com/csstools/normalize.css/blob/master/evergreen.css
@@ -45,3 +44,4 @@ Firefox: https://searchfox.org/mozilla-central/source/layout/style/res/html.css
 
 - MIT License, Copyright (c) 2022 <u1> (like all repositories in this organization) <br>
 - Suggestions, ideas, finding bugs and making pull requests make us very happy. ♥
+
