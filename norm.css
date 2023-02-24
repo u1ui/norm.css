@@ -1,4 +1,4 @@
-html {
+:where(html) {
 	/* Chrome rounds computed line-height:
 	16px (font-size) * 1.15 (line-height) = 18.4px (line-height);
 	But chrome uses 18px. So use a number that gives full pixels. (1.124 or 1.1875) */
@@ -6,7 +6,7 @@ html {
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
-h1 {
+:where(h1) {
 	font-size: 2em; /* Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
 	margin: 0.67em 0;
 }
@@ -31,48 +31,46 @@ h1 {
 	border-color: currentColor; /* Correct table border color in Chrome and Safari. */
 	/* text-indent: 0; will enable it if someone has a need for it */
 }
-textarea, /* textarea: Firefox and Safari. */
-button, input, select /* Safari. */ {
+:where(textarea, button, input, select) { /* textarea: Firefox, all:Safari */
 	margin: 0;
 }
 :where(textarea) { /* behave like in firefox */
 	baseline-source: first; /* available in chrome 111, safari no */
 }
-button, [type="button"], [type="reset"], [type="submit"] {
+:where(button, input:is([type="button"], [type="reset"], [type="submit"])) {
 	-webkit-appearance: button; /* Correct the inability to style buttons in iOS and Safari. */
 }
-[type="search"] {
+:where([type="search"]) {
 	-webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari. */
 	/* outline-offset: -2px; /* Correct the outline style in Safari. Get worse in chrome... */
 }
-::-webkit-search-decoration {
+:where(::-webkit-search-decoration) {
 	-webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS. */
 }
 /* i can not reproduce
-::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+:where(::-webkit-inner-spin-button, ::-webkit-outer-spin-button) {
 	height: auto; /* Correct the cursor style of increment and decrement buttons in Safari * /
 }
 */
-::placeholder { /* Correct the text style of placeholders in Chrome and Safari. */
+:where(::placeholder) { /* Correct the text style of placeholders in Chrome and Safari. */
 	color: inherit;
 	opacity: .54;
 }
-::-webkit-file-upload-button {
+:where(::-webkit-file-upload-button) {
 	-webkit-appearance: button; /* Correct the inability to style upload buttons in iOS and Safari. */
 	font: inherit; /* Change font properties to `inherit` in Safari. */
 }
 :where(:-moz-ui-invalid) { /* Remove the additional :invalid styles in Firefox. */
 	box-shadow: none;
 }
-summary { /* Add the correct display in safari 14 */
+:where(summary) { /* Add the correct display in safari 14 */
 	display: list-item;
 }
-
-[inert] { /* chrome < 102 safari < 15.5 firefox < x */
+:where([inert]) { /* chrome < 102 safari < 15.5 firefox < x */
 	pointer-events: none;
 	cursor: default;
 }
-[inert], [inert] * {
+:where([inert], [inert] *) {
 	/* user-modify: read-only !important; no effect? */
 	-webkit-user-select: none;
 	user-select: none;
