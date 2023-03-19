@@ -8,9 +8,9 @@
 ## Description
 
 - lightweight
+- maintained
 - up to date
 - ***No*** opinionated styles. (use https://github.com/u1ui/base.css for it).
-- uses :where() only for normalizations in browsers that do support it.
 
 ## Resources
 
