@@ -66,6 +66,9 @@
 :where(summary) { /* Add the correct display in safari 14 */
 	display: list-item;
 }
+:where(search) {
+	display:block;
+}
 :where([inert]) { /* chrome < 102 safari < 15.5 firefox < x */
 	pointer-events: none;
 	cursor: default;
