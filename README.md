@@ -20,6 +20,7 @@ https://github.com/kripod/css-homogenizer/blob/main/reset.css
 https://github.com/AustinGil/bedrocss/tree/master/src  
 https://github.com/krishdevdb/reseter.css/blob/master/css/reseter.css  
 https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css  
+https://github.com/garrettw/vitals/blob/master/css/vitals.css  
 https://github.com/petertjmills/tailwind-preflight/blob/master/src/preflight.css (plus optionated)  
 https://github.com/h5bp/main.css/blob/main/src/_base.css (plus optionated)
 
