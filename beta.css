@@ -28,4 +28,10 @@ input:not([type=radio], [type=checkbox]) {
     border-radius:0;
     border:1px solid #000;
 }
+
+i can not reproduce
+:where(::-webkit-inner-spin-button, ::-webkit-outer-spin-button) {
+	height: auto; /* Correct the cursor style of increment and decrement buttons in Safari * /
+}
+
 */

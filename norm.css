@@ -47,11 +47,6 @@
 :where(::-webkit-search-decoration) {
 	-webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS. */
 }
-/* i can not reproduce
-:where(::-webkit-inner-spin-button, ::-webkit-outer-spin-button) {
-	height: auto; /* Correct the cursor style of increment and decrement buttons in Safari * /
-}
-*/
 :where(::placeholder) { /* Correct the text style of placeholders in Chrome and Safari. */
 	color: inherit;
 	opacity: .54;
