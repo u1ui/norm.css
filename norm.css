@@ -64,7 +64,7 @@
 :where(search) {
 	display:block;
 }
-:where([inert]) { /* chrome < 102 safari < 15.5 firefox < x */
+:where([inert]) { /* ch < 102 sf < 15.5 ff < 112 */
 	pointer-events: none;
 	cursor: default;
 }
